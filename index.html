@@ -25,36 +25,79 @@
                         <a class="nav-link" href="">Blog<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class= "nav-link" href="">News</a>
+                        <a class="nav-link" href="">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class= "nav-link" href="">About</a>
+                        <a class="nav-link" href="">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class= "nav-link" href="">Contact</a>
+                        <a class="nav-link" href="">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="row section1">
-            <div class="col-md-9 section1BigContent">
-                <div class="imgContainer">
-                    <img src="assets/specImage.jpg">
+            <div class="col-md section1BigBox">
+                <div class="contentContainer">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <picture class="carouselImgDynamic">
+                                    <source srcset="assets/spectre1000x350.jpg" media="(min-width: 1200px)">
+                                    <source srcset="assets/spectre1375x485.jpg" media="(min-width: 768px)">
+                                    <source srcset="assets/spectre768x415.jpg" media="(min-width: 375px)">
+                                    <img srcset="assets/spectre380x485.jpg" alt="responsive image" class="d-block img-fluid">
+                                </picture>
+                            </div>
+                            <div class="carousel-item">
+                                <picture class="carouselImgDynamic">
+                                    <source srcset="assets/spectre1000x350.jpg" media="(min-width: 1200px)">
+                                    <source srcset="assets/spectre1375x485.jpg" media="(min-width: 768px)">
+                                    <source srcset="assets/spectre768x415.jpg" media="(min-width: 375px)">
+                                    <img srcset="assets/spectre380x485.jpg" alt="responsive image" class="d-block img-fluid">
+                                </picture>
+                            </div>
+                            <div class="carousel-item">
+                                <picture class="carouselImgDynamic">
+                                    <source srcset="assets/spectre1000x350.jpg" media="(min-width: 1200px)">
+                                    <source srcset="assets/spectre1375x485.jpg" media="(min-width: 768px)">
+                                    <source srcset="assets/spectre768x415.jpg" media="(min-width: 375px)">
+                                    <img srcset="assets/spectre380x485.jpg" alt="responsive image" class="d-block img-fluid">
+                                </picture>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
+
             </div>
-            <div class="col-md-3 section1SmallContent">
+            <div class="col-xl-3 section1SmallBox">
                 <div class="row section1SmallContentTop">
-                    <div class="imgContainer">
+                    <div class="contentContainer">
                         <img class="section1TopImg" src="assets/section1top.jpg">
                     </div>
+                    <div class="contentContainer smHidden">
+                        <img class="section1TopImg smHidden" src="assets/section1top.jpg">
+                    </div>
+
                 </div>
                 <div class="row section1SmallContentBottom">
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
