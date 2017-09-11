@@ -10,33 +10,62 @@
     <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body class="page-body">
     <div class="container-content">
+
+
         <nav class="navbar navbar-toggleable-md topnav">
-            <button class="navbar-toggler navbar-toggler-right navButton" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon hamburger"><b>&#9776;</b></span>
-            </button>
+            <button class="navbar-toggler navbar-toggler-right navButton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon hamburger"><b>&#9776;</b></span>
+  </button>
             <a class="navbar-brand" href="#"><img src="assets/dota-bos-banner.png"></a>
-            <div class="collapse navbar-collapse" id="navbarUtils">
-                <ul class="navbar-nav ml-auto justify-content-end navbar-right">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto navbar-right">
                     <li class="nav-item active">
-                        <a class="nav-link" href="">Heroes<span class="sr-only">(current)</span></a>
+                        <a class="nav-link heroesLink underlinedHover" href="#">Heroes<span class="sr-only">(current)</span></a>
+                        <div class="shownOnNavHover heroesHoverContent">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="dividingLine"><span class="mostPopular">Text</span></div>
+                                </div>
+                                <div class="col-4">
+                                    <h1>Search:</h1>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Guides</a>
+                        <a class="nav-link guidesLink underlinedHover" href="#">Guides</a>
+                        <div class="shownOnNavHover guidesHoverContent">
+                        <h1>SHOWN ON HOVER OVER GUIDES</h1>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Articles</a>
+                        <a class="nav-link articlesLink underlinedHover" href="#">Articles</a>
+                        <div class="shownOnNavHover articlesHoverContent">
+                        <h1>SHOWN ON HOVER OVER ARTICLES</h1>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">About</a>
+                        <a class="nav-link aboutLink underlinedHover" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown Link</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
+        
+        
+        
         <div class="row section1 justify-content-center">
             <div class="col-md section1BigBox">
                 <div class="contentContainer">
