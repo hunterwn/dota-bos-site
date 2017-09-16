@@ -16,41 +16,33 @@
 <body class="page-body">
     <div class="container-content">
 
-
         <nav class="navbar navbar-toggleable-md topnav">
             <button class="navbar-toggler navbar-toggler-right navButton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
    <span class="navbar-toggler-icon hamburger"><b>&#9776;</b></span>
   </button>
-            <a class="navbar-brand" href="#"><img src="assets/dota-bos-banner.png"></a>
+            <a class="navbar-brand" href="#"><input class="logo" onclick="openTab(event, 'home')" id="defaultOpen" type="Image" src="assets/dota-bos-banner.png"></a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto navbar-right">
-                    <li class="nav-item active">
-                        <a class="nav-link heroesLink underlinedHover" href="#">Heroes<span class="sr-only">(current)</span></a>
+                    <li class="nav-item active link1">
+                        <a class="nav-link heroesLink underlinedHover" href="#"><button class='tablink' onclick="openTab(event, 'items')">Items</button><span class="sr-only">(current)</span></a>
                         <div class="shownOnNavHover heroesHoverContent">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="dividingLine"><span class="mostPopular">Text</span></div>
-                                </div>
-                                <div class="col-4">
-                                    <h1>Search:</h1>
-                                </div>
-                            </div>
+                        <h1>SHOWN ON HOVER OVER ITEMS</h1>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link guidesLink underlinedHover" href="#">Guides</a>
+                        <a class="nav-link guidesLink underlinedHover" href="#"><button class='tablink' onclick="openTab(event, 'guides')">Guides</button></a>
                         <div class="shownOnNavHover guidesHoverContent">
                         <h1>SHOWN ON HOVER OVER GUIDES</h1>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link articlesLink underlinedHover" href="#">Articles</a>
+                        <a class="nav-link articlesLink underlinedHover" href="#"><button class='tablink' onclick="openTab(event, 'articles')">Articles</button></a>
                         <div class="shownOnNavHover articlesHoverContent">
                         <h1>SHOWN ON HOVER OVER ARTICLES</h1>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link aboutLink underlinedHover" href="#">About</a>
+                        <a class="nav-link aboutLink underlinedHover" href="#"><button class='tablink' onclick="openTab(event, 'about')">About</button></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown Link</a>
@@ -64,78 +56,109 @@
             </div>
         </nav>
         
-        
-        
-        <div class="row section1 justify-content-center">
-            <div class="col-md section1BigBox">
-                <div class="contentContainer">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <picture class="carouselImgDynamic">
-                                    <source srcset="assets/spectre1000x350.jpg" media="(min-width: 1200px)">
-                                    <source srcset="assets/spectre1375x485.jpg" media="(min-width: 768px)">
-                                    <source srcset="assets/spectre768x415.jpg" media="(min-width: 375px)">
-                                    <img srcset="assets/spectre380x485.jpg" alt="responsive image" class="d-block img-fluid">
-                                </picture>
-                            </div>
-                            <div class="carousel-item">
-                                <picture class="carouselImgDynamic">
-                                    <source srcset="assets/puck1000x350.jpg" media="(min-width: 1200px)">
-                                    <source srcset="assets/puck1375x485.jpg" media="(min-width: 768px)">
-                                    <source srcset="assets/puck768x415.jpg" media="(min-width: 375px)">
-                                    <img srcset="assets/puck380x485.jpg" alt="responsive image" class="d-block img-fluid">
-                                </picture>
-                            </div>
-                            <div class="carousel-item">
-                                <picture class="carouselImgDynamic">
-                                    <source srcset="assets/luna1000x350.jpg" media="(min-width: 1200px)">
-                                    <source srcset="assets/luna1375x485.jpg" media="(min-width: 768px)">
-                                    <source srcset="assets/luna768x415.jpg" media="(min-width: 375px)">
-                                    <img srcset="assets/luna380x485.jpg" alt="responsive image" class="d-block img-fluid">
-                                </picture>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-xl-3 section1SmallBox">
-                <div class="row section1SmallContentTop justify-content-center">
-                    <div class="contentContainer s1leftContainer">
-                        <img class="section1TopImg section1Left" src="assets/Team-Liquid.jpg">
-                    </div>
-                    <div class="contentContainer s1rightContainer xlHidden">
-                        <img class="section1TopImg section1right xlHidden" src="assets/dendi.jpg">
-                    </div>
-
-                </div>
-                <div class="row section1SmallContentBottom">
+        <div id='home' class="tabcontent">
+            <div class="row section1 justify-content-center">
+                <div class="col-md section1BigBox">
                     <div class="contentContainer">
-                        <img class="section1BotImg" src="assets/dendi.jpg">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <picture class="carouselImgDynamic">
+                                        <source srcset="assets/spectre1000x350.jpg" media="(min-width: 1200px)">
+                                        <source srcset="assets/spectre1375x485.jpg" media="(min-width: 768px)">
+                                        <source srcset="assets/spectre768x415.jpg" media="(min-width: 375px)">
+                                        <img srcset="assets/spectre380x485.jpg" alt="responsive image" class="d-block img-fluid">
+                                    </picture>
+                                </div>
+                                <div class="carousel-item">
+                                    <picture class="carouselImgDynamic">
+                                        <source srcset="assets/puck1000x350.jpg" media="(min-width: 1200px)">
+                                        <source srcset="assets/puck1375x485.jpg" media="(min-width: 768px)">
+                                        <source srcset="assets/puck768x415.jpg" media="(min-width: 375px)">
+                                        <img srcset="assets/puck380x485.jpg" alt="responsive image" class="d-block img-fluid">
+                                    </picture>
+                                </div>
+                                <div class="carousel-item">
+                                    <picture class="carouselImgDynamic">
+                                        <source srcset="assets/luna1000x350.jpg" media="(min-width: 1200px)">
+                                        <source srcset="assets/luna1375x485.jpg" media="(min-width: 768px)">
+                                        <source srcset="assets/luna768x415.jpg" media="(min-width: 375px)">
+                                        <img srcset="assets/luna380x485.jpg" alt="responsive image" class="d-block img-fluid">
+                                    </picture>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xl-3 section1SmallBox">
+                    <div class="row section1SmallContentTop justify-content-center">
+                        <div class="contentContainer s1leftContainer">
+                            <img class="section1TopImg section1Left" src="assets/Team-Liquid.jpg">
+                        </div>
+                        <div class="contentContainer s1rightContainer xlHidden">
+                            <img class="section1TopImg section1right xlHidden" src="assets/dendi.jpg">
+                        </div>
+
+                    </div>
+                    <div class="row section1SmallContentBottom">
+                        <div class="contentContainer">
+                            <img class="section1BotImg" src="assets/dendi.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        
+        
+        
+        <div id='items' class="tabcontent">
+            <div class="row section1 justify-content-center">
+                
+            </div>
+        </div>
+        
+        <div id='guides' class="tabcontent">
+            <div class="row section1 justify-content-center">
+            
+            </div>
+        </div>
+        
+        <div id='articles' class="tabcontent">
+            <div class="row section1 justify-content-center">
+            
+            </div>
+        </div>
+        
+        <div id='about' class="tabcontent">
+            <div class="row section1 justify-content-center">
+            
+            </div>
+        </div>
+        
     </div>
 
+    
+    <script src='script.js'></script>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>
