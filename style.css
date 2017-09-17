@@ -10,9 +10,9 @@ body.page-body {
     display: block;
 }
 
+/****************NAVBAR****************/
 
-/*NAVBAR*/
-
+/*navbar styles*/
 .topnav {
     border-bottom: 1px solid black;
     box-shadow: 0px 1px 0px rgba(163, 163, 163, 0.3);
@@ -24,11 +24,13 @@ body.page-body {
 
 .navbar-right {
     margin-top: 15px;
+    box-sizing: border-box;
 }
 
 .navbar-right li a {
     margin: 20px 20px 0px 0px;
     position: relative;
+    color: #c0ccd6;
 }
 
 .nav-link {
@@ -36,29 +38,50 @@ body.page-body {
     width: 100px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
 }
 
-.nav-link button {
-    padding: 0;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #c0ccd6;
+/*Styles for tabbing between content*/
+.tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s;
+}
+
+@media (min-width: 769px) {
+.navbar-right .current{
+    background-color: #000;
+    color: #fff67c;
+    }}
+
+.logo {
     background: none;
-    border: none;
-    border-radius: 0;
 }
 
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*Hover styles for navbar children*/
 .nav-link:hover,
 .hamburger:hover {
     color: #fff;
     transition: 0.1s ease-in-out 0s;
 }
 
-.navbar-brand img {
+/*Default logo size style*/
+.navbar-brand .logo {
     width: 250px;
     transition: 0.2s ease-in-out;
 }
 
+/*Styles for dropdown button*/
 .navButton {
     position: absolute;
     right: 5px;
@@ -76,6 +99,7 @@ body.page-body {
     display: none;
 }
 
+/*styles for hidden hover content*/
 .shownOnNavHover {
     display: none;
     position: fixed;
@@ -131,9 +155,9 @@ body.page-body {
     color: #fff;
 }
 
+/****************NAVBAR MOBILE****************/
 
-/*NAVBAR MOBILE*/
-
+/*Styles at different breakpoints*/
 @media (max-width: 1375px) {
     .navbar-right li {
         margin: 0px 10px;
@@ -143,21 +167,46 @@ body.page-body {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .topnav {
         background-color: #0b0e12;
     }
+    .navbar {
+        padding: 0;
+    }
     .navbar-brand {
-        display: block;
         margin: auto;
     }
-    .navbar-brand img {
+    .navbar-brand .logo {
         width: 190px;
+    }
+    .underlinedHover:before {
+        background: none;
+    }
+    .nav-link {
+        text-align: left;
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+    }
+    .navbar-right li:nth-child(odd) {
+        background-color: #161616;
+        border: 1px solid #2b2b2b;
+    }
+    .navbar-right {
+        margin: 0;
+    }
+    .navbar-right li {
+        padding-left: 10px;
+        margin: 0px;
+    }
+    .navbar-right li a {
+        margin: 0;
     }
 }
 
 @media (max-width: 350px) {
-    .navbar-brand img {
+    .navbar-brand .logo {
         margin-left: 0px;
         width: 120px;
     }
@@ -174,9 +223,9 @@ body.page-body {
     }
 }
 
+/****************CONTENT****************/
 
-/*CONTENT*/
-
+/*Styles for content containers*/
 .container-content {
     max-width: 1375px;
     margin: auto;
@@ -213,17 +262,47 @@ body.page-body {
     display: none;
 }
 
+/*Items Page*/
+#heroSlider {
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+    height: 85px;
+    width: 1375px;
+    background-color: #000;
+}
+
+#heroSlider > .pos2, .pos3, .pos4, 
+.pos5, .pos6, .pos7 {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+#heroSlider img {
+    margin-top: 10px;
+    height: 64px;
+    width: 64px;
+}
+
+/*container used to border images*/
+
 .contentContainer {
     overflow: hidden;
     border: 1px solid black;
     box-shadow: 2px 2px 0px #3a3a3a, -2px -2px 0px #3a3a3a, -2px 2px 0px #3a3a3a, 2px -2px 0px #3a3a3a;
 }
 
+/*this centers images in their container if they're too wide*/
+
 .section1TopImg,
 .section1BotImg {
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
+
+/*Desktop only styles*/
 
 @media (min-width: 1200px) {
     .xlHidden {
@@ -252,7 +331,7 @@ body.page-body {
     }
 }
 
-/*MOBILE CONTENT*/
+/****************MOBILE CONTENT****************/
 
 @media (max-width: 1199px) {
     .section1SmallBox {
@@ -267,6 +346,12 @@ body.page-body {
     .s1leftContainer {
         max-width: 50%;
     }
+}
+
+@media (max-width: 768px) {
+    #heroSlider {
+        display: none;
+    } 
 }
 
 @media (max-width: 544px) {
